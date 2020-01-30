@@ -1,0 +1,8 @@
+{
+    "name": "kaleido-openzeppelin-cli-sample",
+    "version": "0.0.1",
+    "description": "Sample code for using openzeppelin CLI with Kaleido networks",
+    "dependencies": {
+        "web3-providers-http": "^1.2.5"
+    }
+}
