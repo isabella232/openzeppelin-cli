@@ -3,8 +3,8 @@ Demonstrates necessary settings to use openzeppelin CLI with a Kaleido environme
 
 ## Pre-reqs
 
-Node.js: https://nodejs.org/en/download/
-Truffle: https://www.trufflesuite.com/docs/truffle/getting-started/installation
+- Node.js: https://nodejs.org/en/download/
+- Truffle: https://www.trufflesuite.com/docs/truffle/getting-started/installation
 
 ## Run and Test
 
