@@ -49,3 +49,25 @@ module.exports = {
   }
 };
 ```
+
+## Troubleshooting
+
+If you get the following error when OpenZeppelin CLI attempts to create an instance of the deployed contract:
+
+```
+$ npx oz create
+Nothing to compile, all contracts are up to date.
+? Pick a contract to instantiate Counter
+? Pick a network kaleido
+✓ Contract Counter deployed
+All contracts have been deployed
+? Call a function to initialize the instance after creating it? No
+✓ Setting everything up to create contract instances
+✖ Creating instance for contract at 0xa3c521a9F82dd333000762bE47D1FcE71e36d2A1
+Error: Returned error: gas required exceeds allowance or always failing transaction
+```
+
+This is due to the fact that your target Kaleido blockchain is pre-Constantinople, while OpenZeppelin's upgradable proxy contract uses new opcodes only available after the Constantinople EVM version. Any Kaleido environments created prior to Jan 8th, 2020 will not have the Constantinople chain config, and as such will not be compatible with OpenZeppelin CLI.
+
+To use the CLI tool you must create a new environment, which will have Constantinople support. If you have an existing environment that needs to be migrated to Constantinople, please contact support@kaleido.io.
+
